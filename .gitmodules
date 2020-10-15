@@ -1,0 +1,3 @@
+[submodule "amongus"]
+	path = amongus
+	url = git@github.com:dionkoeze/amongus.git
