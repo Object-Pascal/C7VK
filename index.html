@@ -24,27 +24,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.1/socket.io.js"></script>
 </head>
 <body class="main-container" style="background-image: url('bg.jpg');">
-    <h1>Maak je eigen Among Us!</h1>
-    <p>Deze html pagina met wat css en javascript is een simpel voorbeeldje van hoe je de backend kan aanspreken om jullie spel te maken. Style de pagina zo fancy als je wil! Bedenk zelf een game theme! Wat gaat het doel van je spel worden en wat moet de impostor voor elkaar krijgen?</p>
-
-    <p>Misschien weet je wel hoe Among Us wordt gespeeld. Het spel dat je gaat maken is er wel op gebaseerd, maar er zijn andere mechanics die je kan gebruiken. De mechanics die je tot je beschikking hebt zijn:</p>
-    <ul>
-        <li>Het speel wordt continu door gespeeld. Het spel wordt gereset als er geen spelers zijn (als je alle tabbladen met je spel sluit, kan even duren)</li>
-        <li>De wereld bestaat uit rooms en de 'lobby' bestaat altijd</li>
-        <li>Je kan kamers aanmaken en ze aan elkaar linken (dubbel aanmaken of linken is geen probleem)</li>
-        <li>Spelers bevinden zich in een room en kunnen naar een andere room gaan (iedereen begint in de lobby)</li>
-        <li>Items kunnen in kamers liggen en in de inventory van spelers zitten</li>
-        <li>Iedere speler kan altijd voten wie de Impostor is, maar iedere vote kost 1 punt</li>
-        <li>Als een meerderheid van de spelers op de echte Impostor stemt is de Impostor ontdekt</li>
-        <li>Hoe sneller de Impostor ontdekt wordt hoe meer punten iedereen verdient</li>
-        <li>Als de Impostor gevonden is wordt er een nieuwe aangewezen</li>
-        <li>Er wordt pas een Impostor aangewezen als er minimaal 4 spelers zijn</li>
-    </ul>
-
-    <form id="userName" name="userName">
-        <p>Wat is je naam?</p>
-        <input id="name" autocomplete="off"><button>Send name</button>
-    </form>
+    
+	<div class="modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<form id="userName" name="userName">
+				        <p>Wat is je naam?</p>
+				        <input id="name" autocomplete="off"><button>Send name</button>
+				    </form>	
+				</div>
+			</div>
+		</div>
+	</div>
+    
 
     <div id="playerInfo">
         <h3>Player info</h3>
