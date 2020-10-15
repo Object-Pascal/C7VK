@@ -55,7 +55,7 @@ socket.emit('new start item', {
 });
 socket.emit('new start item', {
     room: 'hotel room 302',
-    item: 'lamp',
+    item: 'toets',
 });
 socket.emit('new start item', {
     room: 'hotel room 302',
