@@ -2,7 +2,9 @@
 // voorbeeld: const socket = io('/A1');
 // standaard zit iedereen op example, als je niet in het eerste jaar zit, maar 
 // wel mee wil doen, gebruik dan een van de volgende namespaces: game1, game2, game3, game4, game5
-const socket = io('https://onderons.herokuapp.com/example');
+const socket = io('https://onderons.herokuapp.com/c7vk');
+
+console.log(socket);
 
 // om het spel op te bouwen zetten we een aantal vaste kamers neer
 socket.emit('new room', 'elevator');

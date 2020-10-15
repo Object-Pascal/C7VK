@@ -4,14 +4,13 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./index_files/chat.css">
-    <script src="./index_files/socket.io.js"></script>
-
     <style>
         .main-container {
             color: white;
         }
     </style>
+    <link rel="stylesheet" href="chat.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.1/socket.io.js"></script>
 </head>
 <body class="main-container" style="background-image: url('bg.jpg');">
     <h1>Maak je eigen Among Us!</h1>
@@ -31,7 +30,7 @@
         <li>Er wordt pas een Impostor aangewezen als er minimaal 4 spelers zijn</li>
     </ul>
 
-    <form id="userName" name="userName" action="https://bb.avans.nl/bbcswebdav/pid-1960341-dt-content-rid-65258097_1/courses/AEI-2021A-I-1-1-VT/index.html">
+    <form id="userName" name="userName">
         <p>Wat is je naam?</p>
         <input id="name" autocomplete="off"><button>Send name</button>
     </form>
@@ -81,13 +80,13 @@
     </div>
 
     <ul id="messages"></ul>
-    <form name="userRoomInput" action="https://bb.avans.nl/bbcswebdav/pid-1960341-dt-content-rid-65258097_1/courses/AEI-2021A-I-1-1-VT/index.html">
+    <form name="userRoomInput">
         <input id="roomText" autocomplete="off"><button>Send to room</button>
     </form>
-    <form name="userGlobalInput" action="https://bb.avans.nl/bbcswebdav/pid-1960341-dt-content-rid-65258097_1/courses/AEI-2021A-I-1-1-VT/index.html">
+    <form name="userGlobalInput">
         <input id="globalText" autocomplete="off"><button>Send to everyone</button>
     </form>
 
-    <script src="./index_files/game.js"></script>
+    <script src="game.js"></script>
 
 </body></html>
