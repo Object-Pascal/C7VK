@@ -8,8 +8,19 @@
         .main-container {
             color: white;
         }
+
+        .player-card {
+            width: 96px;
+            height: 96px;
+        }
+
+        .player-card > img {
+            width: 72px;
+            height: 72px;
+        }
     </style>
     <link rel="stylesheet" href="chat.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.1/socket.io.js"></script>
 </head>
 <body class="main-container" style="background-image: url('bg.jpg');">
@@ -68,6 +79,19 @@
         <div>
             <p>Players (click to vote, costs 1 point):</p>
             <ul id="roomPlayers"></ul>
+
+            <div class="player-card col-md-4">
+                <img src="player-card.png" />
+                <p>Test</p>
+            </div>
+            <div class="player-card col-md-4">
+                <img src="player-card.png" />
+                <p>Test</p>
+            </div>
+            <div class="player-card col-md-4">
+                <img src="player-card.png" />
+                <p>Test</p>
+            </div>
         </div>
         <div>
             <p>Items (click to pick up):</p>
