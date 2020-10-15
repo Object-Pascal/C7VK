@@ -160,41 +160,35 @@ socket.on('chat message', function(data){
 });
 
 socket.on('room info', function(room) {
-    // iedere keer bouwen we alle room info helemaal opnieuw op
-
-    // onthoud alle relevante elements
     const roomName = document.getElementById('roomName');
-    const roomPlayers = document.getElementById('roomPlayers');
+    const roomPlayers = document.getElementById('roomplayers-container');
     const roomItems = document.getElementById('roomItems');
     const adjacentRooms = document.getElementById('adjacentRooms');
 
-    // zet de nieuwe naam
     roomName.innerText = room.name;
 
-    // dit verwijdert alle child nodes
     roomPlayers.innerHTML = '';
     roomItems.innerHTML = '';
     adjacentRooms.innerHTML = '';
 
-    // dit voegt alle players toe (denk aan de foreach loop in Java)
     for (const player of room.players) {
-        // maak een nieuw list item
-        const newElement = document.createElement('li');
-        const button = document.createElement('button');
+        const playerCard = document.createElement('div');
+        playerCard.setAttribute("class", "player-card");
 
-        // zet de button in het list item
-        newElement.append(button);
+        const playerImage = document.createElement('img');
+        playerImage.setAttribute("src", "player-card.png");
 
-        // zet de naam van de player
-        button.innerText = player;
+        const playerName = document.createElement('p');
+        playerName.innerHTML = player;
 
-        // hier vertellen we wat de knop moet doen als er op geklikt wordt
-        button.addEventListener("click", function() {
+        playerCard.appendChild(playerImage);
+        playerCard.appendChild(playerName);
+
+        playerCard.addEventListener("click", function () {
             socket.emit('my vote', player);
         });
 
-        // voeg het nieuwe element in de DOM toe
-        roomPlayers.append(newElement);
+        roomPlayers.append(playerCard);
     }
 
     // dit voegt alle items toe (denk aan de foreach loop in Java)

@@ -10,13 +10,25 @@
         }
 
         .player-card {
-            width: 96px;
-            height: 96px;
+            width: 72px;
+            height: 72px;
+
+            display: inline-block;
+            vertical-align: top;
+
+            margin: 10px;
+            margin-bottom: 30px;
         }
 
         .player-card > img {
             width: 72px;
             height: 72px;
+
+            cursor: pointer;
+        }
+
+        .player-card > p {
+            text-align: center;
         }
     </style>
     <link rel="stylesheet" href="chat.css">
@@ -76,19 +88,20 @@
     <div id="roomInfo">
         <h3>Room info</h3>
         <p>Naam: <span id="roomName"></span></p>
-        <div>
-            <p>Players (click to vote, costs 1 point):</p>
-            <ul id="roomPlayers"></ul>
+        <p>Players (click to vote, costs 1 point):</p>
 
-            <div class="player-card col-md-4">
+        <div id="roomplayers-container">
+            <!--<ul id="roomPlayers"></ul>-->
+
+            <div class="player-card">
                 <img src="player-card.png" />
                 <p>Test</p>
             </div>
-            <div class="player-card col-md-4">
+            <div class="player-card">
                 <img src="player-card.png" />
                 <p>Test</p>
             </div>
-            <div class="player-card col-md-4">
+            <div class="player-card">
                 <img src="player-card.png" />
                 <p>Test</p>
             </div>
