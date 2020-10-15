@@ -1,0 +1,13 @@
+.message {
+    list-style-type: none;
+}
+
+.global {
+    font-style: italic;
+}
+
+#messages {
+    border: solid .1em;
+    width: 30em;
+    height: 40em;
+}
